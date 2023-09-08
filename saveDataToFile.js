@@ -7,7 +7,7 @@ app.use(express.json());
 const QuestionnaireData = 'data.json';
 const UserRponseData = 'UserReponse.json';
 const EssaiData='Essai.json';
-const DashbordData='dashbord.json';
+const DashbordData='Dashbord.json';
 const ReadQuesData = (callback) => {
   fs.readFile(QuestionnaireData, 'utf8', (err, data) => {
     if (err) {
@@ -278,6 +278,7 @@ app.get('/readDashBordData', (req, res) => {
     if (err) {
       res.status(500).json({ error: 'Error reading from the file', err });
     } else {
+      console.log(jsonData);
       res.json(jsonData);
     }
   });
