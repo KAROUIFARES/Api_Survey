@@ -278,7 +278,6 @@ app.get('/readDashBordData', (req, res) => {
     if (err) {
       res.status(500).json({ error: 'Error reading from the file', err });
     } else {
-      console.log(jsonData);
       res.json(jsonData);
     }
   });
