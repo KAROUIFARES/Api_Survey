@@ -126,7 +126,7 @@ const saveDashbordData=(data, callback)=>{
           callback(writeErr);
         } else {
           console.log('Dashboard data saved successfully!');
-          callback(null);
+          //callback(null);
         }
       });
     });
